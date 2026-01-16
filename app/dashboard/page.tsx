@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import Layout from '@/components/layout/Layout'
 import Link from 'next/link'
 import { User, Building2, Briefcase, FileText, CreditCard, Settings } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function DashboardPage() {
   const { data: session, status } = useSession()
