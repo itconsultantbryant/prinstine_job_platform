@@ -1,7 +1,8 @@
 services:
   - type: web
     name: pgc-jobs-platform
-    env: node
+    runtime: node
+    plan: free
     buildCommand: npm install && npm run build
     startCommand: npm start
     envVars:
@@ -13,3 +14,5 @@ services:
         sync: false
       - key: NEXTAUTH_URL
         sync: false
+    healthCheckPath: /
+    autoDeploy: true
